@@ -1,0 +1,16 @@
+#Write a Python program that returns a dictionary which consists the unique elements 
+#in the following tuple as keys and the number of occurrences of elements as values.
+
+tuple1 = (20, 10, 60, 70, 50, 20, 80, 20, 10, 20, 60, 60, 50)
+
+mydict={}
+mylist=list(set(tuple1))
+mylist.sort()
+for i in mylist:
+    for j in range(len(mylist)): 
+        count=0
+        for k in list(tuple1):
+            if k==i:
+                count+=1
+        mydict[i]=count
+print(mydict) 
